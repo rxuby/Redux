@@ -86,7 +86,7 @@ function FormRegister() {
                   size="large"
                   type="primary"
                   htmlType="submit"
-                  className="bg-gray-700 w-[50%] shadow-md "
+                  className="bg-gray-700/70 w-[50%] shadow-md "
                 >
                   Register
                 </Button>
@@ -95,7 +95,7 @@ function FormRegister() {
                   size="large"
                   type="primary"
                   onClick={() => dispatch(clearFormRegister())}
-                  className="bg-gray-700 w-[50%] shadow-lg"
+                  className="bg-gray-700/70 w-[50%] shadow-lg"
                 >
                   Clear
                 </Button>
