@@ -1,4 +1,3 @@
-
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../store/store";
 import type { FormProps } from "antd";
@@ -31,13 +30,13 @@ function FormRegister() {
 
   return (
     <>
-      <div className="flex  w-full h-screen justify-between border text   bg-gradient-to-r from-indigo-700 to-black">
+      <div className="flex  w-full h-screen justify-between border text   bg-gradient-to-t to-gray-800 from-black">
         <div className="flex w-full justify-center items-center  ">
           <Form
             name="basic"
             labelCol={{ span: 8 }}
-            wrapperCol={{ span: 20 }}
-            style={{ maxWidth: 600 }}
+            wrapperCol={{ span: 24 }}
+            style={{}}
             initialValues={{ remember: true }}
             onFinish={onFinish}
             onFinishFailed={onFinishFailed}
@@ -45,7 +44,7 @@ function FormRegister() {
             autoComplete="off"
             layout="vertical"
           >
-            <h1 className="text-center mb-12 font-bold text-[2rem] text-white">
+            <h1 className=" text-center mb-12 font-bold text-[2rem] text-white">
               Vite + React + Redux
             </h1>
             <Form.Item<FieldType>
@@ -55,7 +54,7 @@ function FormRegister() {
                 { required: true, message: "Please input your username!" },
               ]}
             >
-              <Input />
+              <Input style={{ padding: 7 }} />
             </Form.Item>
 
             <Form.Item<FieldType>
@@ -68,7 +67,7 @@ function FormRegister() {
                 },
               ]}
             >
-              <Input />
+              <Input style={{ padding: 7 }} />
             </Form.Item>
 
             <Form.Item<FieldType>
@@ -78,16 +77,16 @@ function FormRegister() {
                 { required: true, message: "Please input your password!" },
               ]}
             >
-              <Input.Password />
+              <Input.Password style={{ padding: 7 }} />
             </Form.Item>
             {/* <div className="flex w-full  "> */}
             <Form.Item>
-              <div className="flex items-center justify-between w-[100%] space-x-3 ">
+              <div className="flex items-center justify-between  space-x-3 mt-5  ">
                 <Button
                   size="large"
                   type="primary"
                   htmlType="submit"
-                  className="bg-gray-600"
+                  className="bg-gray-700 w-[50%] shadow-md "
                 >
                   Register
                 </Button>
@@ -96,7 +95,7 @@ function FormRegister() {
                   size="large"
                   type="primary"
                   onClick={() => dispatch(clearFormRegister())}
-                  className="bg-gray-600"
+                  className="bg-gray-700 w-[50%] shadow-lg"
                 >
                   Clear
                 </Button>
@@ -108,10 +107,10 @@ function FormRegister() {
 
         <div className="flex w-2/4 bg-white *:">
           <div className="text-left pl-6 pt-6">
-            <h1>ข้อมูลจาก Reducer</h1>
-            <h2>user: {register_form.username}</h2>
-            <h2>email: {register_form.email}</h2>
-            <h2>password: {register_form.password}</h2>
+            <h1 className="text-[30px]">ข้อมูลจาก Reducer</h1>
+            <h2 className="text-[20px]">user: {register_form.username}</h2>
+            <h2 className="text-[20px]">email: {register_form.email}</h2>
+            <h2 className="text-[20px]">password: {register_form.password}</h2>
           </div>
         </div>
       </div>

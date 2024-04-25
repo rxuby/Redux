@@ -4,11 +4,12 @@ import router from "@functions/route";
 import { Button, ConfigProvider, Space } from "antd";
 import { config_theme } from "@components/ConfigTheme";
 import Counter from "./components/Counter";
-import Register from "./components/FormRegister"
+import Register from "./components/FormRegister";
+
 
 function App() {
   return (
-  //  <RouterProvider router={router}/>
+    //  <RouterProvider router={router}/>
 
     // <ConfigProvider
     //   theme={
@@ -22,12 +23,8 @@ function App() {
     // </ConfigProvider>
 
     <>
-      <div>
-      
-        {/* <Counter /> */}
-        <Register/>
-        
-      </div>
+      {/* <Counter /> */}
+      <Register />
     </>
   );
 }
