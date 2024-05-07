@@ -9,7 +9,11 @@ function PokemonDetail() {
   const navigator = useNavigate();
 
   if (!data) {
-    return <div><PokemonError/></div>;
+    return (
+      <div>
+        <PokemonError />
+      </div>
+    );
   }
 
   return (
